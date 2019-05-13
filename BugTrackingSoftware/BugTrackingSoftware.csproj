@@ -50,6 +50,12 @@
     <Compile Include="Admin_Panel.Designer.cs">
       <DependentUpon>Admin_Panel.cs</DependentUpon>
     </Compile>
+    <Compile Include="Bug Entry Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bug Entry Form.Designer.cs">
+      <DependentUpon>Bug Entry Form.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -64,6 +70,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Admin_Panel.resx">
+      <DependentUpon>Admin_Panel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Bug Entry Form.resx">
+      <DependentUpon>Bug Entry Form.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>

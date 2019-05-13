@@ -15,5 +15,40 @@ namespace BugTrackingSoftware
         {
             InitializeComponent();
         }
+
+        private void Admin_Panel_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void userToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tabPage_ApUser_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tabPage_ApUser_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox_Changepassword_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tabPage_ApAccount_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
