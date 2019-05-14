@@ -9,3 +9,5 @@ E:\British College\Advanced Software Engineering\Examples\BugTrackingSoftware\Bu
 E:\British College\Advanced Software Engineering\Examples\BugTrackingSoftware\BugTrackingSoftware\obj\Debug\BugTrackingSoftware.New_User.resources
 E:\British College\Advanced Software Engineering\Examples\BugTrackingSoftware\BugTrackingSoftware\obj\Debug\BugTrackingSoftware.Admin_Panel.resources
 E:\British College\Advanced Software Engineering\Examples\BugTrackingSoftware\BugTrackingSoftware\obj\Debug\BugTrackingSoftware.BugEntryForm.resources
+E:\British College\Advanced Software Engineering\Examples\BugTrackingSoftware\BugTrackingSoftware\obj\Debug\BugTrackingSoftware.BugSolutionForm.resources
+E:\British College\Advanced Software Engineering\Examples\BugTrackingSoftware\BugTrackingSoftware\obj\Debug\BugTrackingSoftware.UserPanel.resources

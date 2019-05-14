@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
+
 namespace BugTrackingSoftware
 {
     public partial class LoginForm : Form
@@ -28,11 +29,7 @@ namespace BugTrackingSoftware
 
         private void btnNewUser_Click(object sender, EventArgs e)
         {
-           /* New_User newUser = new New_User();
-            newUser.Show();
-            this.Hide();*/
-
-            Admin_Panel newUser = new Admin_Panel();
+            New_User newUser = new New_User();
             newUser.Show();
             this.Hide();
         }
