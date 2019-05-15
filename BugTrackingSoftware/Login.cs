@@ -29,7 +29,7 @@ namespace BugTrackingSoftware
 
         private void btnNewUser_Click(object sender, EventArgs e)
         {
-            New_User newUser = new New_User();
+            BugEntryForm newUser = new BugEntryForm();
             newUser.Show();
             this.Hide();
         }
