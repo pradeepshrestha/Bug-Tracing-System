@@ -5,15 +5,17 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace BugTrackingSoftware
 {
-    public partial class New_User : Form
+    public partial class NewUser : Form
     {
-        public New_User()
+        public NewUser()
         {
-            InitializeComponent();
+           InitializeComponent();
         }
 
         private void textBox4_TextChanged(object sender, EventArgs e)
@@ -28,9 +30,76 @@ namespace BugTrackingSoftware
 
         private void btnExit_Click(object sender, EventArgs e)
         {
-            LoginForm Login = new LoginForm();
+            Login Login = new Login();
             Login.Show();
             this.Hide();
+        }
+
+        private void New_User_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+             DBConnection con = new DBConnection();
+            string sql_LUserlist = "Select UserName from tbl_userlogin";
+            MySqlCommand cmd1 = new MySqlCommand(sql_LUserlist, con.Db_Connect());
+            MySqlDataReader r = cmd1.ExecuteReader();
+
+            if (r.Read())
+            {
+                String UserNameCheck = r.GetString("UserName");
+                if (txt_NUUsername.Text != UserNameCheck)
+                {
+                    try
+                    {
+                        
+                        if (txt_NUConfPass.Text == txt_NUPassword.Text)
+                        {
+                            //Connecting to the database for checking unique username
+                            String sql_insertusr = "INSERT INTO tbl_userlogin(UserName, Password, Usr_Type,Request_Verified) VALUES ('" + txt_NUUsername.Text + "','" + txt_NUPassword.Text + "','Tracker','No')";
+                            MySqlCommand cmd2 = new MySqlCommand(sql_insertusr, con.Db_Connect());
+                            cmd2.ExecuteNonQuery();
+                            MessageBox.Show("User " + txt_NUUsername.Text + " successfully Created!!!");
+
+                            txt_NUUsername.Clear();
+                            txt_NUPassword.Clear();
+                            txt_NUConfPass.Clear();
+
+                            this.Close();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Password do not match.");
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+
+                        MessageBox.Show("User Name already exists.");
+                        txt_NUUsername.Clear();
+                        txt_NUPassword.Clear();
+                        txt_NUConfPass.Clear();
+                        
+                        
+                    }
+                    
+                }
+
+                else
+                {
+                    MessageBox.Show("UserName already exist!!!");
+                }
+            }
+            else
+            {
+
+            }
+
+
+
+        }
         }
     }
 }

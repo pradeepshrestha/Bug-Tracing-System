@@ -1,6 +1,6 @@
 ﻿namespace BugTrackingSoftware
 {
-    partial class LoginForm
+    partial class Login
     {
         /// <summary>
         /// Required designer variable.
@@ -28,11 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginForm));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.txt = new System.Windows.Forms.TextBox();
+            this.txtPass = new System.Windows.Forms.TextBox();
             this.txtUserName = new System.Windows.Forms.TextBox();
-            this.btnNewAccount = new System.Windows.Forms.Button();
+            this.btnNewUser = new System.Windows.Forms.Button();
             this.btnLogin = new System.Windows.Forms.Button();
             this.lblPass = new System.Windows.Forms.Label();
             this.lblUname = new System.Windows.Forms.Label();
@@ -42,9 +42,9 @@
             // groupBox1
             // 
             this.groupBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("groupBox1.BackgroundImage")));
-            this.groupBox1.Controls.Add(this.txt);
+            this.groupBox1.Controls.Add(this.txtPass);
             this.groupBox1.Controls.Add(this.txtUserName);
-            this.groupBox1.Controls.Add(this.btnNewAccount);
+            this.groupBox1.Controls.Add(this.btnNewUser);
             this.groupBox1.Controls.Add(this.btnLogin);
             this.groupBox1.Controls.Add(this.lblPass);
             this.groupBox1.Controls.Add(this.lblUname);
@@ -59,14 +59,14 @@
             this.groupBox1.Text = "Enter UserName and Password";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
-            // txt
+            // txtPass
             // 
-            this.txt.Location = new System.Drawing.Point(90, 151);
-            this.txt.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.txt.Name = "txt";
-            this.txt.Size = new System.Drawing.Size(178, 26);
-            this.txt.TabIndex = 5;
-            this.txt.Enter += new System.EventHandler(this.txt_Enter);
+            this.txtPass.Location = new System.Drawing.Point(90, 151);
+            this.txtPass.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txtPass.Name = "txtPass";
+            this.txtPass.Size = new System.Drawing.Size(178, 26);
+            this.txtPass.TabIndex = 5;
+            this.txtPass.Enter += new System.EventHandler(this.txt_Enter);
             // 
             // txtUserName
             // 
@@ -76,16 +76,16 @@
             this.txtUserName.Size = new System.Drawing.Size(178, 26);
             this.txtUserName.TabIndex = 4;
             // 
-            // btnNewAccount
+            // btnNewUser
             // 
-            this.btnNewAccount.Location = new System.Drawing.Point(182, 210);
-            this.btnNewAccount.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.btnNewAccount.Name = "btnNewAccount";
-            this.btnNewAccount.Size = new System.Drawing.Size(104, 34);
-            this.btnNewAccount.TabIndex = 3;
-            this.btnNewAccount.Text = "New User";
-            this.btnNewAccount.UseVisualStyleBackColor = true;
-            this.btnNewAccount.Click += new System.EventHandler(this.btnNewUser_Click);
+            this.btnNewUser.Location = new System.Drawing.Point(182, 210);
+            this.btnNewUser.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.btnNewUser.Name = "btnNewUser";
+            this.btnNewUser.Size = new System.Drawing.Size(104, 34);
+            this.btnNewUser.TabIndex = 3;
+            this.btnNewUser.Text = "New User";
+            this.btnNewUser.UseVisualStyleBackColor = true;
+            this.btnNewUser.Click += new System.EventHandler(this.btnNewUser_Click);
             // 
             // btnLogin
             // 
@@ -96,6 +96,7 @@
             this.btnLogin.TabIndex = 2;
             this.btnLogin.Text = "Login";
             this.btnLogin.UseVisualStyleBackColor = true;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // lblPass
             // 
@@ -119,7 +120,7 @@
             this.lblUname.TabIndex = 0;
             this.lblUname.Text = "User Name";
             // 
-            // LoginForm
+            // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -129,7 +130,7 @@
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.Name = "LoginForm";
+            this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "BugTrackingSoftware";
             this.TransparencyKey = System.Drawing.Color.DarkRed;
@@ -145,9 +146,9 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label lblUname;
         private System.Windows.Forms.Label lblPass;
-        private System.Windows.Forms.Button btnNewAccount;
+        private System.Windows.Forms.Button btnNewUser;
         private System.Windows.Forms.Button btnLogin;
-        private System.Windows.Forms.TextBox txt;
+        private System.Windows.Forms.TextBox txtPass;
         private System.Windows.Forms.TextBox txtUserName;
     }
 }
