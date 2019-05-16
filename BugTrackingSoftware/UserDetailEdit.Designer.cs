@@ -134,14 +134,7 @@
             this.rb_Admin.UseVisualStyleBackColor = true;
             this.rb_Admin.CheckedChanged += new System.EventHandler(this.rb_Admin_CheckedChanged);
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(71, 103);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(87, 19);
-            this.label3.TabIndex = 12;
-            this.label3.Text = "User Type :";
+            
             // 
             // label2
             // 
@@ -181,7 +174,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "UserDetailEdit";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "User\'s Detail Edit";
+            this.Text = "User's Detail Edit";
             this.Load += new System.EventHandler(this.New_User_Load);
             this.UserRequestList.ResumeLayout(false);
             this.UserRequestList.PerformLayout();

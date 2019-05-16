@@ -15,7 +15,7 @@ namespace BugTrackingSoftware
     {
         public NewUser()
         {
-           InitializeComponent();
+           //InitializeComponent();
         }
 
         private void textBox4_TextChanged(object sender, EventArgs e)
@@ -50,22 +50,22 @@ namespace BugTrackingSoftware
             if (r.Read())
             {
                 String UserNameCheck = r.GetString("UserName");
-                if (txt_NUUsername.Text != UserNameCheck)
+                if (txtUname.Text != UserNameCheck)
                 {
                     try
                     {
                         
-                        if (txt_NUConfPass.Text == txt_NUPassword.Text)
+                        if (txtCPass.Text == txtPass.Text)
                         {
                             //Connecting to the database for checking unique username
-                            String sql_insertusr = "INSERT INTO tbl_userlogin(UserName, Password, Usr_Type,Request_Verified) VALUES ('" + txt_NUUsername.Text + "','" + txt_NUPassword.Text + "','Tracker','No')";
+                            String sql_insertusr = "INSERT INTO tbl_userlogin(UserName, Password, Usr_Type,Request_Verified) VALUES ('" + txtUname.Text + "','" + txtPass.Text + "','Tracker','No')";
                             MySqlCommand cmd2 = new MySqlCommand(sql_insertusr, con.Db_Connect());
                             cmd2.ExecuteNonQuery();
-                            MessageBox.Show("User " + txt_NUUsername.Text + " successfully Created!!!");
+                            MessageBox.Show("User " + txtUname.Text + " successfully Created!!!");
 
-                            txt_NUUsername.Clear();
-                            txt_NUPassword.Clear();
-                            txt_NUConfPass.Clear();
+                            txtUname.Clear();
+                            txtPass.Clear();
+                            txtCPass.Clear();
 
                             this.Close();
                         }
@@ -74,17 +74,13 @@ namespace BugTrackingSoftware
                             MessageBox.Show("Password do not match.");
                         }
                     }
-                    catch (Exception ex)
+                    catch (Exception)
                     {
-
                         MessageBox.Show("User Name already exists.");
-                        txt_NUUsername.Clear();
-                        txt_NUPassword.Clear();
-                        txt_NUConfPass.Clear();
-                        
-                        
+                        txtUname.Clear();
+                        txtPass.Clear();
+                        txtCPass.Clear();                     
                     }
-                    
                 }
 
                 else
@@ -97,9 +93,6 @@ namespace BugTrackingSoftware
 
             }
 
-
-
         }
-        }
+      }
     }
-}

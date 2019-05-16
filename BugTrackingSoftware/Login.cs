@@ -38,7 +38,7 @@ namespace BugTrackingSoftware
         /// <param name="e"></param>
         private void btnNewUser_Click(object sender, EventArgs e)
         {
-            NewUser newUser = new NewUser();
+            Admin_Panel newUser = new Admin_Panel();
             newUser.Show();
             this.Hide();
         }

@@ -67,7 +67,7 @@ namespace BugTrackingSoftware
                 dataGridView_APBGS.DataSource = dt2;
                 con2.CloseConnection();
             }
-            catch (Exception ex)
+            catch (Exception)
             {
 
             }
@@ -120,7 +120,7 @@ namespace BugTrackingSoftware
 
 
             }
-            catch (Exception ex)
+            catch (Exception)
             {
 
 
